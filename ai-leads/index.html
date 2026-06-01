@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A beginner-friendly, compliant way to use AI automation to attract more leads, signups, and sales — built on permission, not scraping." />
+  <title>How to Use AI Automation to Get More Leads (Without Getting Your Domain Banned) — Fast2future</title>
+  <style>
+    :root {
+      --bg-1: #0f172a;
+      --bg-2: #1e293b;
+      --accent: #38bdf8;
+      --accent-strong: #0ea5e9;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --rule: rgba(148, 163, 184, 0.18);
+      --card: rgba(148, 163, 184, 0.08);
+      --card-border: rgba(148, 163, 184, 0.2);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 50% -10%, rgba(56, 189, 248, 0.18), transparent 60%),
+        linear-gradient(160deg, var(--bg-1) 0%, var(--bg-2) 100%);
+      min-height: 100vh;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.75;
+    }
+
+    .wrap { max-width: 720px; margin: 0 auto; }
+
+    .back {
+      display: inline-block;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+      transition: color 0.15s ease;
+    }
+    .back:hover { color: var(--accent); }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 999px;
+      padding: 0.4rem 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 5vw, 2.85rem);
+      line-height: 1.12;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 2.75rem 0 1rem;
+    }
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 1.75rem 0 0.5rem;
+      color: var(--text);
+    }
+
+    article { font-size: 1.06rem; color: #e2e8f0; }
+    article p { margin-bottom: 1.3rem; }
+    article strong { color: var(--text); }
+    article ol, article ul { margin: 0 0 1.3rem 1.4rem; }
+    article li { margin-bottom: 0.5rem; }
+    blockquote {
+      border-left: 3px solid var(--accent);
+      background: var(--card);
+      padding: 0.9rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 0 0 1.4rem;
+      color: #cbd5e1;
+    }
+    hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+    /* Comparison table */
+    .table-scroll { overflow-x: auto; margin-bottom: 1.6rem; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.97rem; }
+    th, td { border: 1px solid var(--card-border); padding: 0.6rem 0.8rem; text-align: left; vertical-align: top; }
+    th { background: var(--card); color: var(--text); }
+    td { color: #cbd5e1; }
+
+    /* Flow diagram */
+    .diagram {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1.1rem;
+      overflow-x: auto;
+      color: var(--accent);
+      font-size: 0.92rem;
+      line-height: 1.5;
+      margin-bottom: 1.6rem;
+    }
+
+    /* Opt-in form */
+    .form-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 1.6rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .form-card h3 { margin-top: 0; font-size: 1.25rem; }
+    .form-card .lead { color: var(--muted); margin-bottom: 1.1rem; font-size: 0.98rem; }
+    .form-row { margin-bottom: 0.9rem; display: flex; flex-direction: column; gap: 0.35rem; }
+    .form-row label { font-size: 0.92rem; color: #cbd5e1; }
+    .form-row input[type="text"],
+    .form-row input[type="email"] {
+      background: #0b1220;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 0.7rem 0.85rem;
+      color: var(--text);
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    .form-row input:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+    .consent {
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+      font-size: 0.92rem;
+      color: #cbd5e1;
+      margin: 0.4rem 0 1.1rem;
+      line-height: 1.45;
+    }
+    .consent input { margin-top: 0.25rem; flex-shrink: 0; }
+    .cta {
+      display: inline-block;
+      width: 100%;
+      border: none;
+      cursor: pointer;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #06121f;
+      background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+      padding: 0.9rem 2rem;
+      border-radius: 12px;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(14, 165, 233, 0.35);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      font-family: inherit;
+    }
+    .cta:hover { transform: translateY(-2px); box-shadow: 0 14px 38px rgba(14, 165, 233, 0.45); }
+    .microcopy { font-size: 0.82rem; color: var(--muted); margin-top: 0.8rem; text-align: center; }
+
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    .disclosure { font-style: italic; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/">&larr; Fast2future</a>
+
+    <span class="badge">AI Automation · Lead Gen · Compliant</span>
+    <h1>How to Use AI Automation to Get More Leads (Without Getting Your Domain Banned)</h1>
+
+    <article>
+      <p>
+        <strong>Short answer:</strong> the most reliable way to use AI automation for more
+        leads isn't to scrape strangers and blast cold emails — it's to let AI help you
+        <em>attract</em> the right people, capture them only when they opt in, and follow
+        up in a way a helpful human would. This "attraction" approach converts better,
+        costs almost nothing to start, and won't get your domain blacklisted or land you
+        in legal trouble. Here's exactly how to set it up, step by step, even if you've
+        never automated anything.
+      </p>
+
+      <!-- ============ OPT-IN (top) — INTERIM (Beehiiv not connected yet) ============ -->
+      <!-- BEEHIIV FORM GOES HERE once Justin signs up: replace this interim block with the
+           Beehiiv opt-in form (its action URL or embed <iframe>/snippet). Capture + the
+           3-email welcome series run in Beehiiv. We previously used Netlify Forms; that
+           backend died when the site moved off Netlify, so we deliver value directly via
+           the guide link below instead of collecting emails into a void. -->
+      <div class="form-card">
+        <h3>Get the free 5-Day AI Lead Engine guide</h3>
+        <p class="lead">The exact compliant system in this article, broken into 5 short
+          steps with the AI prompts for each. Free — read it right now.</p>
+        <a class="cta" href="guide.html">Read the free guide now &rarr;</a>
+        <p class="microcopy">Email version + the follow-up series are opening shortly.</p>
+      </div>
+
+      <hr />
+
+      <h2>The fork in the road every business owner hits</h2>
+      <p>
+        You want more leads. AI promises to deliver them on autopilot. So you start
+        searching — and you immediately hit two completely different camps.
+      </p>
+      <p>
+        <strong>Camp one</strong> says: use AI to scrape thousands of business contacts,
+        auto-write personalized openers, and fire off hundreds of cold emails a day through
+        "warmed-up" backup domains so your real inbox doesn't get flagged. Fast. Hands-off.
+        Tempting.
+      </p>
+      <p>
+        <strong>Camp two</strong> says: use AI to create things people actually want, let
+        them come to you, and follow up only with people who said yes.
+      </p>
+      <p>
+        Camp one has a dirty secret: the entire setup exists to evade the spam filters
+        built to stop it. That's the tell. Those backup domains, the "warmup" toggle —
+        they're there because mailbox providers actively fight this. You're not automating
+        a business; you're automating a way to get caught. And the day one scraped contact
+        is in the EU, UK, or Canada, you've crossed real privacy laws (GDPR, PECR, CASL)
+        with real fines.
+      </p>
+      <p>
+        This guide is camp two — and the surprising part is that <strong>camp two makes
+        more money.</strong> Here's why, and here's how to build it.
+      </p>
+
+      <h2>Why "attraction" beats "interruption" (with the numbers behind it)</h2>
+      <p>
+        Cold outreach interrupts people who never asked. Attraction marketing pulls in
+        people already looking. The difference shows up everywhere that matters:
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th></th><th>Cold scrape + blast</th><th>AI-assisted attraction</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Who you reach</strong></td><td>Strangers, no interest</td><td>People actively searching</td></tr>
+            <tr><td><strong>Conversion</strong></td><td>Fractions of a percent</td><td>Multiples higher</td></tr>
+            <tr><td><strong>Domain risk</strong></td><td>High — blacklisting, bans</td><td>None</td></tr>
+            <tr><td><strong>Legal risk</strong></td><td>GDPR/CASL/CAN-SPAM exposure</td><td>Compliant by design</td></tr>
+            <tr><td><strong>Over time</strong></td><td>Decays, needs constant new lists</td><td>Compounds — content keeps working</td></tr>
+            <tr><td><strong>Cost to start</strong></td><td>Paid tools + burner domains</td><td>Free tiers</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The last row is the one most people miss. A cold list is a depreciating asset —
+        you burn it and need another. A useful article or guide is an <em>appreciating</em>
+        one: it keeps attracting opt-ins for months after you publish. That compounding is
+        how a one-person business reaches $1,000/month and beyond without an ad budget.
+      </p>
+
+      <h2>The 4-part engine</h2>
+      <p>Every durable lead system, AI-powered or not, runs on the same four parts:</p>
+      <pre class="diagram">   ATTRACT  ──▶  CAPTURE  ──▶  FOLLOW UP  ──▶  OFFER
+   (content)     (opt-in)      (nurture)      (help, then sell)</pre>
+      <p>AI speeds up each part. Let's build them.</p>
+
+      <h3>1. Attract — let AI help you answer real questions</h3>
+      <p>
+        Pick one type of customer and one question they search when they're frustrated and
+        ready to buy. Ask any AI chat tool:
+      </p>
+      <blockquote>"I sell [X] to [Y]. List 10 buying-intent questions they search when ready
+        to spend money, ranked by how close they are to purchase."</blockquote>
+      <p>
+        Answer the best one in a genuinely useful piece of content. AI drafts it in minutes;
+        you add a real example and your judgment. Publish it where your buyers look — your
+        site, a blog, the platforms they already read.
+      </p>
+      <blockquote><strong>The one rule that protects you:</strong> keep it true. Never invent
+        results or testimonials to drive clicks. Fabricated case studies ("this booked me
+        clients overnight") aren't just sleazy — regulators classify them as deceptive
+        marketing. Honesty isn't only ethical here; it's the safer business strategy.</blockquote>
+
+      <h3>2. Capture — opt-in only, always</h3>
+      <p>
+        Give readers a way to <em>ask</em> for more: a free guide, checklist, or tool in
+        exchange for their email. One form, one clear promise, one explicit "yes." Free
+        tools like Beehiiv and Kit are built for exactly this.
+      </p>
+      <p>
+        The non-negotiable: <strong>a contact only exists once they've voluntarily opted
+        in.</strong> No scraping, no bought lists. That single click is the legal and
+        ethical foundation of everything downstream — and it means every person on your
+        list actually wants to hear from you.
+      </p>
+
+      <h3>3. Follow up — helpful, permission-based, AI-drafted</h3>
+      <p>
+        Someone who opts in is warm. Have AI draft a short welcome sequence — deliver the
+        asset, share a useful tip, then offer a next step — and <em>you</em> review and
+        send it. Be useful before you pitch. You've earned the attention; don't waste it
+        being pushy.
+      </p>
+
+      <h3>4. Offer — recommend only what you'd use, and disclose it</h3>
+      <p>
+        Now you can make an offer: your product, or tools you genuinely use. If you earn a
+        commission, say so in plain language: <em>"I earn a commission if you sign up
+        through this link, at no cost to you."</em> That one sentence keeps you
+        FTC-compliant and, counterintuitively, builds <em>more</em> trust than hiding it.
+      </p>
+
+      <h2>"But isn't this slower?"</h2>
+      <p>
+        Yes — for about a week. Then it flips. Cold blasting front-loads activity and
+        back-loads the pain (bans, complaints, dead domains). Attraction front-loads a
+        little patience and back-loads compounding returns. Every piece you publish keeps
+        working. Every opt-in is someone who chose you. That's a business you can build on,
+        not a liability you're one complaint away from losing.
+      </p>
+      <p>
+        And with AI doing the drafting, research, and follow-up writing, "slower" is
+        measured in days, not months.
+      </p>
+
+      <h2>Start this week (free)</h2>
+      <p>You don't need budget or experience — just one focused task a day:</p>
+      <ol>
+        <li><strong>Pick</strong> one buyer and one buying-intent question (AI helps you find it).</li>
+        <li><strong>Create</strong> one genuinely useful asset answering it (AI drafts, you edit, keep it true).</li>
+        <li><strong>Capture</strong> opt-ins with a free form and explicit consent.</li>
+        <li><strong>Follow up</strong> with a warm, helpful, AI-drafted sequence you control.</li>
+        <li><strong>Offer</strong> one honest next step, with disclosed, genuine recommendations.</li>
+      </ol>
+
+      <hr />
+
+      <h2>Get the done-for-you version</h2>
+      <p>
+        We turned this exact engine into a free step-by-step guide — <strong>The 5-Day AI
+        Lead Engine</strong> — that walks you through building it from scratch, with the AI
+        prompts for each step. Grab it below (or
+        <a href="guide.html" style="color:var(--accent);">read it right now here</a>).
+      </p>
+
+      <!-- ============ OPT-IN (bottom — strong CTA) — INTERIM (Beehiiv not connected yet) ============ -->
+      <!-- BEEHIIV FORM GOES HERE once Justin signs up: replace this interim block with the
+           Beehiiv opt-in form (action URL or embed snippet). Until then, deliver value
+           directly via the guide link — no email capture into a void. -->
+      <div class="form-card">
+        <h3>Read the free 5-Day AI Lead Engine</h3>
+        <p class="lead">Build a compliant, compounding lead system this week. No spam, no
+          scraping, no hype — just the real method.</p>
+        <a class="cta" href="guide.html">Read the free guide now &rarr;</a>
+        <p class="microcopy">Email version + the follow-up series are opening shortly.</p>
+      </div>
+    </article>
+
+    <footer>
+      <p class="disclosure">
+        Disclosure: some articles and the guide may recommend tools we genuinely use via
+        affiliate links — if you sign up through them we may earn a commission at no extra
+        cost to you. We only recommend infrastructure we actually use.
+        Recommended tools (links coming soon): newsletter platform [AFFILIATE LINK PENDING],
+        hosting [AFFILIATE LINK PENDING], domains [AFFILIATE LINK PENDING].
+      </p>
+      <p>
+        <a href="/">Fast2future</a> builds AI automation that's fast, beginner-friendly,
+        and built to last — legal and compliant by default. &copy; 2026 Fast2future.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

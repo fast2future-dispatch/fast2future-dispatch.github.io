@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="We're building an autonomous AI system in public. Here's day one — the goal, what's built so far, and the philosophy." />
+  <title>We're Building an Autonomous AI System in Public — Here's Day One</title>
+  <style>
+    :root {
+      --bg-1: #0f172a;
+      --bg-2: #1e293b;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --rule: rgba(148, 163, 184, 0.18);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 50% -10%, rgba(56, 189, 248, 0.18), transparent 60%),
+        linear-gradient(160deg, var(--bg-1) 0%, var(--bg-2) 100%);
+      min-height: 100vh;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.75;
+    }
+
+    .wrap { max-width: 680px; margin: 0 auto; }
+
+    .back {
+      display: inline-block;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 2.5rem;
+      transition: color 0.15s ease;
+    }
+    .back:hover { color: var(--accent); }
+
+    .date {
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 5vw, 2.85rem);
+      line-height: 1.12;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin: 0.6rem 0 1.75rem;
+    }
+
+    article { font-size: 1.08rem; color: #e2e8f0; }
+    article p { margin-bottom: 1.35rem; }
+    article h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 2.5rem 0 1rem;
+      color: var(--text);
+    }
+    article strong { color: var(--text); }
+    article hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 3.5rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="../index.html">&larr; The Build Journal</a>
+
+    <span class="date">2026-05-31 &middot; Day One</span>
+    <h1>We're Building an Autonomous AI System in Public — Here's Day One</h1>
+
+    <article>
+      <p>
+        Most "AI automation" content shows you the highlight reel: a slick demo, a
+        finished product, a number that went up. This is the opposite of that. We're
+        going to build an autonomous AI marketing system <strong>in public</strong> —
+        the real order of operations, the walls we hit, and the fixes that actually
+        worked. If it's useful, you'll be able to replicate it. If we get something
+        wrong, you'll see that too.
+      </p>
+
+      <h2>The goal</h2>
+      <p>
+        The thesis is simple to say and hard to do: a <strong>high-velocity, multi-agent
+        system where the human is the Chief Architect and AI agents do the execution.</strong>
+        One person sets direction from 30,000 feet — vision, taste, the call on what
+        matters — and a team of agents handles the volume: building, testing, shipping,
+        documenting. The human stops being the bottleneck. The agents stop being toys.
+      </p>
+      <p>
+        That only works if there's real structure underneath it. An agent that can act
+        on its own needs a clear identity, hard rules it can't cross, a memory of what
+        it's done, and a safe sandbox to do it in. Without that, "autonomous" just means
+        "unpredictable." So before any flashy automation, we built the boring,
+        load-bearing parts first.
+      </p>
+
+      <h2>What's been built so far</h2>
+      <p>
+        As of day one, the foundation is real and running:
+      </p>
+      <p>
+        <strong>A private engine repo.</strong> Everything lives in version control — the
+        rules, the architecture, the agent definitions — so the system has one source of
+        truth and a full history. Secrets and personal notes are deliberately kept out of
+        it.
+      </p>
+      <p>
+        <strong>A live site.</strong> The page you're reading this on deploys
+        automatically: a change gets pushed, and it's live seconds later. That same
+        pipeline is what this blog rides on.
+      </p>
+      <p>
+        <strong>An operating system of rules.</strong> A written playbook governs how the
+        agents work — legal and terms-of-service compliance as the top rule that overrides
+        everything else, a bias toward action, and a standing discipline of doing the
+        fast, cheap, simple thing that still gets it right.
+      </p>
+      <p>
+        <strong>A knowledge layer.</strong> A private "second brain" of thinking and
+        frameworks that agents consult before doing any voice, strategy, or content work —
+        so the output reflects an actual point of view instead of generic AI filler.
+      </p>
+      <p>
+        <strong>The autonomous executor, being set up.</strong> The piece that runs
+        multi-step tasks on its own — in a locked-down sandbox, with a hard spend cap and
+        a least-privilege setup so it only ever touches the few things it needs. Safety is
+        built in <em>before</em> it's switched on, not bolted on after.
+      </p>
+
+      <h2>The philosophy</h2>
+      <p>
+        Three principles are doing most of the work here.
+      </p>
+      <p>
+        <strong>Build in public.</strong> The most valuable part of any build is the part
+        people usually hide — the snags. Documenting them honestly is what makes this
+        worth following and possible to copy.
+      </p>
+      <p>
+        <strong>Momentum over perfection.</strong> The system improves as it goes. Ship
+        the good-enough version, learn from it, iterate. Polishing something already
+        working is just a nicer-looking way to stall.
+      </p>
+      <p>
+        <strong>Document the hard-won lessons.</strong> Every problem we solve gets
+        written down so it's never re-fought — and so the next person doesn't have to lose
+        the hour we lost. A fix you can hand to someone else is worth ten you keep in your
+        head.
+      </p>
+
+      <hr />
+
+      <p>
+        That's day one: a foundation, a set of principles, and a system that's starting to
+        run itself. The interesting part — handing real work to agents and watching what
+        happens — comes next. We'll write it down as it happens, the good and the ugly.
+      </p>
+      <p>
+        Follow along. The whole point is that you could build this too.
+      </p>
+    </article>
+
+    <footer>
+      <a href="../index.html">&larr; More from The Build Journal</a><br /><br />
+      © 2026 Fast2future. Built in public.
+    </footer>
+  </div>
+</body>
+</html>

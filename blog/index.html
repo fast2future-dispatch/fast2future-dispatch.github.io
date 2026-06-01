@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Build Journal — documenting the journey of building an autonomous AI marketing system in public." />
+  <title>The Build Journal — Fast2future</title>
+  <style>
+    :root {
+      --bg-1: #0f172a;
+      --bg-2: #1e293b;
+      --accent: #38bdf8;
+      --accent-strong: #0ea5e9;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --card: rgba(148, 163, 184, 0.08);
+      --card-border: rgba(148, 163, 184, 0.18);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 50% -10%, rgba(56, 189, 248, 0.18), transparent 60%),
+        linear-gradient(160deg, var(--bg-1) 0%, var(--bg-2) 100%);
+      min-height: 100vh;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    .wrap { max-width: 760px; margin: 0 auto; }
+
+    .back {
+      display: inline-block;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-bottom: 2.5rem;
+      transition: color 0.15s ease;
+    }
+    .back:hover { color: var(--accent); }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 999px;
+      padding: 0.4rem 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    h1 .grad {
+      background: linear-gradient(90deg, var(--accent), #a78bfa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    p.sub {
+      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+      color: var(--muted);
+      margin-bottom: 3rem;
+    }
+
+    .posts { list-style: none; display: grid; gap: 1.25rem; }
+
+    .post-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 1.5rem 1.75rem;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .post-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(56, 189, 248, 0.5);
+    }
+    .post-date {
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .post-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0.4rem 0 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    .post-excerpt { color: var(--muted); font-size: 1rem; }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/">&larr; back to fast2future</a>
+
+    <span class="badge">The Build Journal</span>
+    <h1>Building <span class="grad">Fast2future</span>, in public.</h1>
+    <p class="sub">
+      Documenting the journey of building an autonomous AI marketing system in public —
+      the wins, the walls we hit, and the lessons worth keeping.
+    </p>
+
+    <p style="margin:-1.5rem 0 2.5rem;font-size:0.95rem;">
+      <a href="/ai-leads/" style="color:var(--accent);text-decoration:none;">→ Get more leads with AI (free 5-Day guide)</a>
+    </p>
+
+    <ul class="posts">
+      <li>
+        <a class="post-card" href="posts/01-building-a-mind-you-can-hand-to-a-machine.html">
+          <span class="post-date">2026-05-31 &middot; Day One</span>
+          <div class="post-title">We're Building an Autonomous AI System in Public — Here's Day One</div>
+          <p class="post-excerpt">
+            The goal, what's been built so far, and the philosophy: human as Chief
+            Architect, AI agents as the execution layer — momentum over perfection.
+          </p>
+        </a>
+      </li>
+    </ul>
+
+    <footer>© 2026 Fast2future. Built in public.</footer>
+  </div>
+</body>
+</html>
